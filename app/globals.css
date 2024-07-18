@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.stroke-text {
+  color: transparent; /* Set the text fill color */
+  -webkit-text-stroke: 1px white; /* Define the stroke width and color */
+  position: relative;
+}
+
+.stroke-text::before {
+  content: attr(data-text); /* Duplicate the text */
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1; /* Place it behind the original text */
+  color: transparent; /* Make the duplicate text transparent */
+  -webkit-text-stroke: 2px black; /* Define the stroke width and color for the duplicate */
+}
