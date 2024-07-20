@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import about from '../assets/images/about.svg'
 import aboutDumbell from '../assets/images/about_dumbell.svg'
 import Image from 'next/image'
@@ -7,7 +7,6 @@ import { useDeviceType } from '@/hooks'
 
 const AboutDetails = () => {
     const deviceType = useDeviceType();
-
     return (
         <>
             {
@@ -21,10 +20,10 @@ const AboutDetails = () => {
                                 </div>
                                 <div style={{ width: "100%", fontFamily: "Poppins", fontWeight: 400, fontSize: "16px", lineHeight: "27.04px", display: "flex", alignItems: "center", position: "relative", zIndex: 2, paddingBottom: "50px", color: "#242424BF", position: "relative" }}>
                                     <span>
-                                        Hi, I am Faizaan Xec from Goa, India. As an engineer turned fitness professional, I bring a unique perspective to the world of fitness. I studied Automobile Engineering and later attended K11 Fitness Academy to pursue my passion for fitness. Now, I work as a Strength and Hypertrophy Coach. I am also a certified sports nutritionist and a Level 3 personal trainer with certifications from K11, INFS, and IFSI.<br/>
+                                        Hi, I am Faizaan Xec from Goa, India. As an engineer turned fitness professional, I bring a unique perspective to the world of fitness. I studied Automobile Engineering and later attended K11 Fitness Academy to pursue my passion for fitness. Now, I work as a Strength and Hypertrophy Coach. I am also a certified sports nutritionist and a Level 3 personal trainer with certifications from K11, INFS, and IFSI.<br />
                                         My mission is to revive the essence of hardcore training, cutting through the trends of modern gyms with fancy lighting and café-like environments. I focus on real, effective training, rejecting trendy but ineffective methods. My goal is to create a culture where people train with purpose, push their limits, and embrace the true spirit of physical transformation. Join me in this journey to experience authentic and impactful fitness training
                                     </span>
-                                    <div style={{ position: "absolute", height: "100%", width: "100%", zIndex: 1, opacity: 0.2,top:"-30%" }}>
+                                    <div style={{ position: "absolute", height: "100%", width: "100%", zIndex: 1, opacity: 0.2, top: "-30%" }}>
                                         <Image src={aboutDumbell} style={{ height: "100%", width: "100%", objectFit: "contain" }} />
                                     </div>
                                 </div>

@@ -30,7 +30,7 @@ const Transformations = () => {
       <div style={{ width: "80%" }}>
         <span style={{ fontFamily: "Poppins", fontWeight: 700, fontSize: deviceType == "mobile" ? "24px" : 56, lineHeight: deviceType == "mobile" ? "36px" : "84px", color: colors.primaryColor }}>Transformations</span>
         <div style={{ display: "flex", flexDirection: deviceType == "mobile" ? "column" : "row", marginTop: deviceType == "mobile" ? "21px" : "0px" }}>
-          <div style={{ height: 300, width: 300 }}>
+          <div style={{ height: deviceType == "mobile" ? 300 : 500, width: deviceType == "mobile" ? 300 : 500 }}>
             <Slider {...settings}>
               <div>
                 <Image src={trans1} style={{ height: "100%", width: "100%", objectFit: "contain" }} />
@@ -46,7 +46,7 @@ const Transformations = () => {
               </div>
             </Slider>
           </div>
-          <div style={{ height:deviceType=="mobile"?"390px": 500, width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <div style={{ height: deviceType == "mobile" ? "390px" : 500, width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
             <div style={{ height: deviceType == "mobile" ? "250px" : 404, width: 440, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div style={{ display: "flex", gap: 15 }}>
                 <div style={{ height: deviceType == "mobile" ? "44px" : 60, width: deviceType == "mobile" ? "84px" : 100, borderRadius: "50%", display: "flex", justifyContent: 'center', alignItems: "center", background: "#2424241A" }}>

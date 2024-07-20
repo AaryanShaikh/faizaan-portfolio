@@ -1,3 +1,4 @@
+"use client";
 import { Services, Footer, Navbar } from '@/components'
 import React from 'react'
 

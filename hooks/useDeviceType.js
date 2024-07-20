@@ -1,37 +1,33 @@
 import { useState, useEffect } from 'react';
 
 const useDeviceType = () => {
-  const [deviceType, setDeviceType] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return getDeviceType();
-    } else {
-      return 'desktop'; // Default value during SSR
-    }
-  });
+    const [deviceType, setDeviceType] = useState('desktop'); // Default to 'desktop'
 
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
+    useEffect(() => {
+        if (typeof screen !== 'undefined') {
+            const handleResize = () => {
+                setDeviceType(getDeviceType());
+            };
 
-    const handleResize = () => {
-      setDeviceType(getDeviceType());
-    };
+            // Set initial device type on client side
+            handleResize();
 
-    window.addEventListener('resize', handleResize);
+            window.addEventListener('resize', handleResize);
 
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+            // Cleanup listener on unmount
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }
+    }, []);
 
-  return deviceType;
+    return deviceType;
 };
 
 const getDeviceType = () => {
-  const width = window.innerWidth;
-  return width >= 768 ? 'desktop' : 'mobile';
+    const width = screen.innerWidth;
+    console.log("width", screen.width);
+    return width >= 768 ? 'desktop' : 'mobile';
 };
 
 export default useDeviceType;
