@@ -1,9 +1,19 @@
 import { useState, useEffect } from 'react';
 
 const useDeviceType = () => {
-  const [deviceType, setDeviceType] = useState(getDeviceType());
+  const [deviceType, setDeviceType] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return getDeviceType();
+    } else {
+      return 'desktop'; // Default value during SSR
+    }
+  });
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     const handleResize = () => {
       setDeviceType(getDeviceType());
     };
