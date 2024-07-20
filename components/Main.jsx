@@ -1,14 +1,20 @@
 import React from 'react'
-import { Hero, Navbar, Transformations } from '.'
+import { Contact, Footer, Hero, Mission, Navbar, Transformations } from '.'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Main = () => {
     return (
         <div>
-            <Navbar />
-            <div style={{ overflowY: "scroll" }}>
+            <Navbar isSel={"home"} />
+            <div style={{ marginTop: "93px" }}>
                 <Hero />
                 <Transformations />
+                <Mission />
+                <Contact />
+                <Footer />
             </div>
+
         </div>
     )
 }
