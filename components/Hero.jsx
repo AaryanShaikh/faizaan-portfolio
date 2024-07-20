@@ -9,7 +9,7 @@ import facebook from '../assets/images/facebook_icon.svg'
 
 const Hero = () => {
     return (
-        <div style={{ height: "570px", width: "100%", position: "relative", display: "flex", justifyContent: "center", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 95%)" }}>
+        <div style={{ height: "70vh", width: "100%", position: "relative", display: "flex", justifyContent: "center", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 95%)" }}>
             <div style={{ position: "absolute", right: "20vh", top: "5vh", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
                 <div style={{ width: 2, height: "40px", border: "1px solid #fff" }}></div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 21 }}>
@@ -19,7 +19,7 @@ const Hero = () => {
                 <div style={{ width: 2, height: "40px", border: "1px solid #fff" }}></div>
             </div>
             <Image src={heroBg} style={{ height: "100%", width: "100%", objectFit: "cover", position: "absolute" }} />
-            <div style={{ height: 554, position: "absolute", marginTop: 50, zIndex: 1 }}>
+            <div style={{ height: "68vh", position: "absolute", marginTop: 50, zIndex: 1 }}>
                 <Image src={hero} style={{ height: "100%", width: "auto" }} />
             </div>
             <div style={{ zIndex: 0, position: "absolute", height: 229, width: 443, left: "35vh", top: "13vh" }}>
