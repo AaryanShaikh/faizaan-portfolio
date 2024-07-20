@@ -25,7 +25,7 @@ const useDeviceType = () => {
 };
 
 const getDeviceType = () => {
-    const width = screen.innerWidth;
+    const width = screen.width;
     console.log("width", screen.width);
     return width >= 768 ? 'desktop' : 'mobile';
 };
