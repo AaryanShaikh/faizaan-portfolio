@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { Contact, Footer, Hero, Mission, Navbar, Transformations } from '.'
 import "slick-carousel/slick/slick.css";
